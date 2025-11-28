@@ -33,8 +33,6 @@ hess = optim(par = inits, fn = nll_lm, data = df,
 sqrt(diag(solve(hess)))[1:4]
 
 
-
-fit = lm(y ~ x1 + x2 + x3, df)
 lm_beta_hat = fit$coefficients
 lm_sigma_hat = summary(fit)$sigma
 lm_beta_hat
